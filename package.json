@@ -1,0 +1,39 @@
+{
+  "name": "bitindex",
+  "description": "A bit index that is usable in LevelDB databases.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/randymized/bitindex",
+  "author": {
+    "name": "Randy McLaughlin",
+    "email": "ot40ddj02@sneakemail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/randymized/bitindex.git"
+  },
+  "bugs": {
+    "url": "https://github.com/randymized/bitindex/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/randymized/bitindex/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "./index.js",
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "scripts": {
+    "test": "grunt simplemocha"
+  },
+  "devDependencies": {
+    "mocha": "~1.9.0",
+    "should": "~2.1.0",
+    "grunt-contrib-jshint": "~0.4.0",
+    "grunt-simple-mocha": "git://github.com/yaymukund/grunt-simple-mocha.git",
+    "grunt-contrib-watch": "~0.3.1",
+    "grunt": "~0.4.1"
+  },
+  "keywords": []
+}

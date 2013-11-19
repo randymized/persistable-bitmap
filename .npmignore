@@ -1,0 +1,10 @@
+.git*
+docs/
+examples/
+support/
+test/
+my/
+testing.js
+.DS_Store
+coverage.html
+lib-cov
