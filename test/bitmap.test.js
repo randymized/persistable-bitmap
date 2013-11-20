@@ -12,13 +12,13 @@ describe( 'Bitmap', function() {
     new Bitmap().population().should.equal(0);
   } );
   it( 'should initially test empty', function() {
-    new Bitmap().is_empty().should.be.true
+    new Bitmap().isEmpty().should.be.true
   } );
   it( 'should have a population after a bit is set', function() {
     new Bitmap().set(123).population().should.equal(1);
   } );
   it( 'should not test empty if any bits are set', function() {
-    new Bitmap().set(123).is_empty().should.be.false
+    new Bitmap().set(123).isEmpty().should.be.false
   } );
   it( 'should expand its underlying buffer dynamically', function() {
     var bi= new Bitmap()
@@ -221,5 +221,26 @@ describe( 'Bitmap', function() {
     assert.doesNotThrow(function () {
       new Bitmap().unset(-1)
     })
+  } );
+  it( 'should set a range (byte aligned)', function() {
+    new Bitmap().setRange(0,7).persistable().should.equal('ff')
+  } );
+  it( 'should set a range to a truish value', function() {
+    new Bitmap().setRange(0,7,'x').persistable().should.equal('ff')
+  } );
+  it( 'should unset a range when given a falsish value', function() {
+    new Bitmap().setRange(0,15).setRange(4,11,0).persistable().should.equal('f00f')
+  } );
+  it( 'should set a range that is shifted one bit to the right of byte alignment', function() {
+    new Bitmap().setRange(9,16).persistable().should.equal('007f80')
+  } );
+  it( 'should set a range that is shifted one bit to the left of byte alignment', function() {
+    new Bitmap().setRange(7,14).persistable().should.equal('01fe')
+  } );
+  it( 'should reverse the range if start is greater than end', function() {
+    new Bitmap().setRange(14,7).persistable().should.equal('01fe')
+  } );
+  it( 'should set one bit if the start and end are equal (inclusive range)', function() {
+    new Bitmap().setRange(7,7).persistable().should.equal('01')
   } );
 } );
