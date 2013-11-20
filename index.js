@@ -1,7 +1,7 @@
 
 /*
  * bitindex
- * https://github.com/randymized/bitindex
+ * https://github.com/randymized/persistable-bitmap
  *
  * Copyright (c) 2013 Randy McLaughlin
  * Licensed under the MIT license.
@@ -9,6 +9,4 @@
 
 'use strict';
 
-var Bitindex = require( './lib/bitindex.js' );
-
-module.exports = Bitindex;
+module.exports = require( './lib/bitmap.js' );

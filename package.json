@@ -1,23 +1,23 @@
 {
-  "name": "bitindex",
-  "description": "A bit index that is usable in LevelDB databases.",
+  "name": "persistable-bitmap",
+  "description": "A bit map that can be persisted, such as in LevelDB databases.",
   "version": "0.1.0",
-  "homepage": "https://github.com/randymized/bitindex",
+  "homepage": "https://github.com/randymized/persistable-bitmap",
   "author": {
     "name": "Randy McLaughlin",
     "email": "ot40ddj02@sneakemail.com"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/randymized/bitindex.git"
+    "url": "git://github.com/randymized/persistable-bitmap.git"
   },
   "bugs": {
-    "url": "https://github.com/randymized/bitindex/issues"
+    "url": "https://github.com/randymized/persistable-bitmap/issues"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/randymized/bitindex/blob/master/LICENSE-MIT"
+      "url": "https://github.com/randymized/persistable-bitmap/blob/master/LICENSE-MIT"
     }
   ],
   "main": "./index.js",
