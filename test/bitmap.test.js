@@ -243,4 +243,13 @@ describe( 'Bitmap', function() {
   it( 'should set one bit if the start and end are equal (inclusive range)', function() {
     new Bitmap().setRange(7,7).persistable().should.equal('01')
   } );
+  it( 'should allow the construction of an empty bitmap', function() {
+    new Bitmap('').persistable().should.equal('00')
+  } );
+  it( 'should allow an empty bitmap to grow', function() {
+    new Bitmap('').set(31).persistable().should.equal('00000001')
+  } );
+  it( 'should initalize from "00" properly', function() {
+    new Bitmap('00').set(31).persistable().should.equal('00000001')
+  } );
 } );
