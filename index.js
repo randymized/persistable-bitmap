@@ -9,6 +9,6 @@
 
 'use strict';
 
-var bitindex = require( './lib/bitindex.js' );
+var Bitindex = require( './lib/bitindex.js' );
 
-module.exports = bitindex;
+module.exports = Bitindex;
