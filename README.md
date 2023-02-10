@@ -1,5 +1,14 @@
 # persistable-bitmap [![Build Status](https://secure.travis-ci.org/randymized/persistable-bitmap.png?branch=master)](http://travis-ci.org/randymized/persistable-bitmap)
 
+[![Not Maintained](https://img.shields.io/badge/Maintenance%20Level-Abandoned-orange.svg)](https://gist.github.com/cheerfulstoic/d107229326a01ff0f333a1d3476e068d)
+
+
+X is **no longer being actively developed** and has been archived. 
+You are still welcome to use it but you may want to check for any forks that are more actively maintained.
+If it is of value to you, you are welcome to fork it or start a new project and incorporate its code into your project.
+
+## Description
+
 > A bitmap class that is readily persistable in LevelDB and other databases.
 
 ## Getting Started
